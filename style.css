@@ -1,0 +1,195 @@
+@font-face {
+  font-family: 'SourceHanSans Regular';
+  src: url("fonts/SourceHanSans-Regular.otf");
+}
+
+@font-face {
+  font-family: SNNeoNoire;
+  src: url("fonts/SNNeoNoire-Regular.ttf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  color: #000;
+  box-sizing: border-box;
+  font-family: 'SourceHanSans Regular';
+}
+
+.header {
+  width: 100%;
+  height: 97px;
+  background-color: #ffd44d;
+  display: flex;
+  justify-content: space-around;
+}
+.header li {
+  display: inline-block;
+  width: 145px;
+  font-size: 23px;
+  text-align: center;
+  line-height: 97px;
+}
+.header li a {
+  display: inline-block;
+  width: 100%;
+}
+
+.header li a:hover {
+  color: green;
+}
+
+.pageBox {
+  width: 100%;
+  height: auto;
+  display: flex;
+  display: -webkit-flex;
+  display: -moz-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.innerBox {
+  position: relative;
+  display: flex;
+  display: -webkit-flex;
+  display: -moz-flex;
+  width: 1920px;
+  height: 900px;
+}
+
+#pg1 {
+  background: transparent url(img/BlueBreeyCake.png) no-repeat center;
+  height: 700px;
+}
+
+#slogans {
+  position: absolute;
+  transform: translateX(1200px);
+  top: 30%;
+  width: 450px;
+  height: 380px;
+}
+
+#slogans :nth-child(1) {
+  font-size: 52px;
+  font-weight: 700;
+  color: #565675;
+}
+
+#slogans :nth-child(2) {
+  font-size: 34px;
+  color: #565675;
+}
+
+#slogans :nth-child(3) {
+  font-size: 24px;
+}
+
+#slogans :nth-child(5) {
+  font-size: 34px;
+}
+
+#slogans :nth-last-child(1) {
+  position: relative;
+  display: block;
+  font-size: 26px;
+  color: #fff;
+  width: 228px;
+  height: 50px;
+  padding-left: 50px;
+  line-height: 50px;
+  background-color: #565675;
+}
+
+#slogans :nth-last-child(1)::after {
+  position: absolute;
+  top: -20%;
+  right: 10%;
+  content: "+1";
+  font-size: 16px;
+  width: 36px;
+  height: 36px;
+  background-color: red;
+  border-radius: 50%;
+  line-height: 36px;
+  text-align: center;
+}
+
+.moreBtn {
+  color: #fff;
+  font: italic 600 22px "Century Gothic";
+  text-align: center;
+  line-height: 46px;
+  width: 145px;
+  height: 46px;
+  border-radius: 51px;
+  background-color: rgb(255, 122, 14);
+}
+
+#pg2 {
+  align-items: center;
+  flex-direction: column;
+  -ms-flex-direction: column;
+}
+.smallTitle {
+  position: relative;
+  text-align: center;
+  width: 100%;
+  height: 100px;
+}
+
+#aboutUs :nth-child(1) {
+  font-size: 30px;
+  font-weight: 600;
+}
+
+#aboutUs :nth-last-child(1) {
+  font-family: SNNeoNoire;
+  position: absolute;
+  top: 24px;
+  left: 0;
+  font-size: 46px;
+  width: 100%;
+  color: rgb(255, 229, 148);
+  z-index: -1;
+}
+
+.titleLines {
+  height: 5px;
+  transform: translateY(-10px);
+}
+.titleLines :nth-child(1) {
+  display: inline-block;
+  width: 75px;
+  height: 5px;
+  background-color: rgb(255, 122, 14);
+  border-radius: 2.5px;
+}
+
+.titleLines :nth-child(2) {
+  display: inline-block;
+  width: 12px;
+  height: 5px;
+  background-color: rgb(255, 122, 14);
+  border-radius: 2.5px;
+}
+.titleLines :nth-child(3) {
+  display: inline-block;
+  width: 15px;
+  height: 5px;
+  background-color: rgb(255, 122, 14);
+  border-radius: 2.5px;
+}
+
+.btnLeft {
+  width: 33px;
+  height: 33px;
+}
+
+.btnLeft::after {
+  content: "";
+  transform: rotate(-45reg);
+}
