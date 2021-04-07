@@ -1,6 +1,6 @@
 @font-face {
-  font-family: 'SourceHanSans Regular';
-  src: url("fonts/SourceHanSans-Regular.otf");
+  font-family: "SourceHanSans Regular";
+  src: url("fonts/NotoSansHans-Regular.otf");
 }
 
 @font-face {
@@ -15,7 +15,7 @@
   text-decoration: none;
   color: #000;
   box-sizing: border-box;
-  font-family: 'SourceHanSans Regular';
+  font-family: "SourceHanSans Regular","Microsoft Yahei";
 }
 
 .header {
@@ -38,7 +38,7 @@
 }
 
 .header li a:hover {
-  color: green;
+  color: #ff7a0e;
 }
 
 .pageBox {
@@ -126,27 +126,32 @@
   width: 145px;
   height: 46px;
   border-radius: 51px;
-  background-color: rgb(255, 122, 14);
+  background-color: #ff7a0e;
 }
 
-#pg2 {
+#pg2,
+#pg3,
+#pg4,
+#pg5 {
   align-items: center;
   flex-direction: column;
   -ms-flex-direction: column;
+  justify-content: center;
 }
 .smallTitle {
   position: relative;
   text-align: center;
   width: 100%;
   height: 100px;
+  z-index: 1;
 }
 
-#aboutUs :nth-child(1) {
+.smallTitle :nth-child(1) {
   font-size: 30px;
   font-weight: 600;
 }
 
-#aboutUs :nth-last-child(1) {
+.smallTitle :nth-last-child(1) {
   font-family: SNNeoNoire;
   position: absolute;
   top: 24px;
@@ -165,7 +170,7 @@
   display: inline-block;
   width: 75px;
   height: 5px;
-  background-color: rgb(255, 122, 14);
+  background-color: #ff7a0e;
   border-radius: 2.5px;
 }
 
@@ -173,23 +178,208 @@
   display: inline-block;
   width: 12px;
   height: 5px;
-  background-color: rgb(255, 122, 14);
+  background-color: #ff7a0e;
   border-radius: 2.5px;
 }
 .titleLines :nth-child(3) {
   display: inline-block;
   width: 15px;
   height: 5px;
-  background-color: rgb(255, 122, 14);
+  background-color: #ff7a0e;
   border-radius: 2.5px;
 }
 
-.btnLeft {
-  width: 33px;
-  height: 33px;
+img[src="img/gy3.png"] {
+  display: block;
+}
+.imgBox {
+  text-align: center;
+  float: left;
 }
 
-.btnLeft::after {
-  content: "";
-  transform: rotate(-45reg);
+.introInfo {
+  width: 577px;
+  float: right;
+}
+.btnLeft {
+  display: inline-block;
+  margin: 35px 10px 0;
+  width: 33px;
+  height: 33px;
+  background-color: #333;
+}
+
+.left {
+  transform: translate(12px, 8px) rotate(-45deg);
+  width: 15px;
+  height: 15px;
+  border: #fff solid 2px;
+  border-bottom: 0;
+  border-right: 0;
+}
+
+.btnRight {
+  margin: 35px 10px 0;
+  display: inline-block;
+  width: 33px;
+  height: 33px;
+  background-color: #ff7a0e;
+}
+
+.right {
+  transform-origin: 100% 100%;
+  -webkit-transform-origin: 100% 100%;
+  transform: translate(8px, 1px) rotate(-45deg);
+  width: 15px;
+  height: 15px;
+  border: #fff solid 2px;
+  border-top: 0;
+  border-left: 0;
+}
+
+.presscenter {
+  position: relative;
+  width: 1040px;
+  height: 600px;
+}
+
+img[src="img/mungCake.png"] {
+  position: absolute;
+}
+.newsInfo {
+  position: absolute;
+  right: 0;
+  top: 24px;
+  width: 580px;
+  height: 180px;
+  background-color: #fff;
+  z-index: 1;
+}
+.newsDate {
+  display: inline-block;
+  width: 50px;
+  position: relative;
+  margin: 30px;
+}
+.newsDate :nth-child(1) {
+  font: 600 45px "Microsoft Yahei";
+}
+.newsDate :nth-child(2) {
+  font: 20px "Microsoft Yahei";
+}
+
+.newsPress {
+  position: relative;
+  top: 229px;
+  display: flex;
+  display: -webkit-flex;
+  display: -moz-flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.newsSubtitle {
+  font-size: 15px;
+}
+
+.newsTitle {
+  font-size: 20px;
+  font-weight: 600;
+}
+.newsDetails {
+  font-size: 12px;
+}
+
+.pressBox {
+  display: flex;
+  display: -webkit-flex;
+  display: -moz-flex;
+  justify-content: center;
+  align-items: center;
+}
+.pressBox:nth-child(n) {
+  border: 2px transparent solid;
+  border-width: 0 2px 0 0;
+  border-right-width: 2px;
+  height: 151px;
+  width: 470px;
+}
+
+.pressBox:nth-child(n):hover {
+  border-right-color: #ffd44d;
+}
+
+#pgBox4 {
+  background: url(img/newArrnalBg.png) no-repeat;
+
+  background-position: top;
+  background-color: #fff;
+  position: relative;
+}
+
+#pg4 .smallTitle :nth-child(1) {
+  color: #fff;
+}
+
+#newArraBox {
+  display: flex;
+  display: -webkit-flex;
+  display: -moz-flex;
+  background-color: rgb(40, 40, 40);
+  flex-wrap: wrap;
+  
+  color: #fff;
+  width: 1040px;
+  height: 520px;
+}
+
+.newArra {
+  position: relative;
+  width: 260px;
+  height: 260px;
+  
+}
+.newArra img {
+  position: relative;
+  width: 260px;
+  height: 260px;
+  transform-origin: 50% 50%;
+  -webkit-transition: all 0.4s;
+  transition: all 0.5s;
+}
+.newArra img[src="img/arrow.png"] {
+  width:auto;
+  height: auto;
+}
+.newArra img:hover {
+  transform: scale(calc(299 / 260));
+  z-index: 2;
+}
+
+.newArra>div{
+  position: absolute; top: 90px; left: 60px;
+}
+.newArraTitle {
+  color: #fff;
+  font-size: 24px;
+}
+.newArraInfo {
+  color: #fff;
+  font-size: 16px;
+}
+.proIntro {
+  display: flex;
+  display: -webkit-flex;
+  display: -moz-flex;
+}
+
+.proIntro div{
+  font-size: 30px;
+  width: 339px;
+  height: 400px;
+  text-align: center;
+
+}
+
+.proIntro p {
+  font-size: 15px;
 }
