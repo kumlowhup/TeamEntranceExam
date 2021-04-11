@@ -1,3 +1,11 @@
+/*
+ * @Author: 钟雅乐 
+ * @Date: 2021-04-01 18:17:21 
+ * @Last Modified by: 钟雅乐
+ * @Last Modified time: 2021-04-11 18:52:10
+ */
+
+ /* 声明需要的字体 */
 @font-face {
   font-family: "SourceHanSans Regular";
   src: url("fonts/NotoSansHans-Regular.otf");
@@ -13,6 +21,8 @@
   src: url("fonts/MFLiHei_Noncommercial.otf");
 }
 
+
+/* 相关初始化工作 */
 * {
   margin: 0;
   padding: 0;
@@ -20,13 +30,14 @@
   text-decoration: none;
   /* color: #000; */
   box-sizing: border-box;
-  font-family: "SourceHanSans Regular","Microsoft Yahei";
+  font-family: "SourceHanSans Regular", "Microsoft Yahei";
 }
 
 a {
-  color :#000;
+  color: #000;
 }
 
+/* 页头 */
 .header {
   width: 100%;
   height: 97px;
@@ -34,6 +45,7 @@ a {
   display: flex;
   justify-content: space-around;
 }
+/* 页头的列表 */
 .header li {
   display: inline-block;
   width: 145px;
@@ -41,8 +53,10 @@ a {
   text-align: center;
   line-height: 97px;
 }
+/* 页头的列表中的链接 */
 .header li a {
   display: inline-block;
+  /* 链接占满整个盒子 */
   width: 100%;
 }
 
@@ -50,6 +64,7 @@ a {
   color: #ff7a0e;
 }
 
+/* 每页的外部大盒子，用flex调控内部小盒子 */
 .pageBox {
   width: 100%;
   height: auto;
@@ -60,6 +75,7 @@ a {
   align-items: center;
 }
 
+/* 内部小盒子 */
 .innerBox {
   position: relative;
   display: flex;
@@ -69,11 +85,12 @@ a {
   height: 900px;
 }
 
+/* 第一页背景图 */
 #pg1 {
   background: transparent url(img/BlueBreeyCake.png) no-repeat center;
   height: 700px;
 }
-
+/* 第一页大字 */
 #slogans {
   position: absolute;
   transform: translateX(1200px);
@@ -82,25 +99,30 @@ a {
   height: 380px;
 }
 
+/* 玩莓主义 */
 #slogans :nth-child(1) {
   font-size: 52px;
   font-weight: 700;
   color: #565675;
 }
 
+/* 同道大叔联名 处女座蛋糕 */
 #slogans :nth-child(2) {
   font-size: 34px;
   color: #565675;
 }
 
+/* VIRGO BLUEBREEY CHEEESECAKE */
 #slogans :nth-child(3) {
   font-size: 24px;
 }
 
+/* 最高立减84元 */
 #slogans :nth-child(5) {
   font-size: 34px;
 }
 
+/* 立即查看盒子 */
 #slogans :nth-last-child(1) {
   position: relative;
   display: block;
@@ -113,6 +135,7 @@ a {
   background-color: #565675;
 }
 
+/* +1 小圆圈 */
 #slogans :nth-last-child(1)::after {
   position: absolute;
   top: -20%;
@@ -127,6 +150,7 @@ a {
   text-align: center;
 }
 
+/* MORE按钮 */
 .moreBtn {
   color: #fff;
   font: italic 600 22px "Century Gothic";
@@ -138,6 +162,7 @@ a {
   background-color: #ff7a0e;
 }
 
+/* 多页的背景 */
 #pg2,
 #pg3,
 #pg4,
@@ -147,6 +172,7 @@ a {
   -ms-flex-direction: column;
   justify-content: center;
 }
+/* 每页标题 */
 .smallTitle {
   position: relative;
   text-align: center;
@@ -155,11 +181,13 @@ a {
   z-index: 1;
 }
 
+/* 标题文字信息 */
 .smallTitle :nth-child(1) {
   font-size: 30px;
   font-weight: 600;
 }
 
+/* 标题文字后面的英文 */
 .smallTitle :nth-last-child(1) {
   font-family: SNNeoNoire;
   position: absolute;
@@ -171,10 +199,12 @@ a {
   z-index: -1;
 }
 
+/* 细线 */
 .titleLines {
   height: 5px;
   transform: translateY(-10px);
 }
+/* 第一条细线 */
 .titleLines :nth-child(1) {
   display: inline-block;
   width: 75px;
@@ -183,6 +213,7 @@ a {
   border-radius: 2.5px;
 }
 
+/* 第二条细线 */
 .titleLines :nth-child(2) {
   display: inline-block;
   width: 12px;
@@ -190,6 +221,8 @@ a {
   background-color: #ff7a0e;
   border-radius: 2.5px;
 }
+
+/* 第三条细线 */
 .titleLines :nth-child(3) {
   display: inline-block;
   width: 15px;
@@ -198,18 +231,24 @@ a {
   border-radius: 2.5px;
 }
 
-img[src="img/gy3.png"] {
+/* “关于我们”的图片 */
+#aboutUsPhoto {
   display: block;
 }
+
+/* 装图片和左右按钮的盒子 */
 .imgBox {
   text-align: center;
   float: left;
 }
 
+/* “关于我们”的具体文字 */
 .introInfo {
   width: 577px;
   float: right;
 }
+
+/* 左按钮 */
 .btnLeft {
   display: inline-block;
   margin: 35px 10px 0;
@@ -218,6 +257,7 @@ img[src="img/gy3.png"] {
   background-color: #333;
 }
 
+/* 左按钮中的三角 */
 .left {
   transform: translate(12px, 8px) rotate(-45deg);
   width: 15px;
@@ -227,6 +267,7 @@ img[src="img/gy3.png"] {
   border-right: 0;
 }
 
+/* 右按钮 */
 .btnRight {
   margin: 35px 10px 0;
   display: inline-block;
@@ -235,6 +276,7 @@ img[src="img/gy3.png"] {
   background-color: #ff7a0e;
 }
 
+/* 右按钮中的三角 */
 .right {
   transform-origin: 100% 100%;
   -webkit-transform-origin: 100% 100%;
@@ -246,6 +288,7 @@ img[src="img/gy3.png"] {
   border-left: 0;
 }
 
+/* 第三页绿豆蛋糕盒子 */
 .presscenter {
   position: relative;
   width: 1040px;
@@ -255,6 +298,8 @@ img[src="img/gy3.png"] {
 img[src="img/mungCake.png"] {
   position: absolute;
 }
+
+/* 新闻资讯头条文字盒子 */
 .newsInfo {
   position: absolute;
   right: 0;
@@ -265,26 +310,30 @@ img[src="img/mungCake.png"] {
   z-index: 1;
 }
 
-.newsInfo div:nth-child(1){
+.newsInfo div:nth-child(1) {
   width: 400px;
   margin: 24px 54px 0;
   border-bottom: #000 dashed 2px;
 }
 
-.newsInfo div:nth-child(2){
+.newsInfo div:nth-child(2) {
   font: 14px "Microsoft Yahei";
   width: 400px;
   margin: 24px 54px;
 }
-.newsInfo p:nth-child(1){
+
+/* 遇见你，刚刚好 */
+.newsInfo p:nth-child(1) {
   font-size: 20px;
 }
 
-.newsInfo p:nth-child(2){
+/* 七夕情人节，一场下午茶的时光 */
+.newsInfo p:nth-child(2) {
   font-size: 24px;
   font-weight: 600;
 }
 
+/* 浏览，点赞 */
 .newsInfo div:nth-child(3),
 .newsInfo div:nth-child(4) {
   position: absolute;
@@ -302,26 +351,33 @@ img[src="img/mungCake.png"] {
   align-items: center;
 }
 
-.newsInfo div:nth-child(3){
+.newsInfo div:nth-child(3) {
   top: 0;
 }
-.newsInfo div:nth-child(4){
+.newsInfo div:nth-child(4) {
   bottom: 0;
 }
 
+/* 每个新闻中的日期盒子 */
 .newsDate {
   display: inline-block;
   width: 50px;
   position: relative;
   margin: 30px;
 }
+
+/* 月份 */
 .newsDate :nth-child(1) {
   font: 600 45px "Microsoft Yahei";
 }
+
+/* 日 */
 .newsDate :nth-child(2) {
   font: 20px "Microsoft Yahei";
 }
 
+
+/* 新闻资讯多个框的大盒子 */
 .newsPress {
   position: relative;
   top: 240px;
@@ -331,50 +387,58 @@ img[src="img/mungCake.png"] {
   justify-content: center;
   flex-wrap: wrap;
 }
+
+/* 新闻副标题 */
 .newsSubtitle {
   font-size: 15px;
 }
 
+/* 新闻标题 */
 .newsTitle {
   font-size: 20px;
   font-weight: 600;
 }
+
+/* 新闻其他信息描述 */
 .newsDetails {
   font-size: 12px;
 }
 
+/* 每个新闻框 */
 .pressBox {
   display: flex;
   display: -webkit-flex;
   display: -moz-flex;
   justify-content: center;
   align-items: center;
-}
-
-.pressBox:nth-child(n) {
   border: 0 transparent solid;
   border-right-width: 15px;
   height: 151px;
   width: 469px;
 }
 
-.pressBox:nth-child(n):hover {
+
+/* 新闻框鼠标经过时的效果 */
+.pressBox:hover {
   border-right-color: #ffd44d;
   box-shadow: 0 0 7px 4px #bbb;
 }
 
+
+/* 新品推荐背景图 */
 #pgBox4 {
   background: url(img/newArrnalBg.png) no-repeat;
-
   background-position: top;
   background-color: #fff;
   position: relative;
 }
 
+/* “新品推荐”标题改白色 */
 #pg4 .smallTitle :nth-child(1) {
   color: #fff;
 }
 
+/* 新品推荐大盒子 */
 #newArraBox {
   display: flex;
   display: -webkit-flex;
@@ -390,8 +454,9 @@ img[src="img/mungCake.png"] {
   position: relative;
   width: 260px;
   height: 260px;
-  
 }
+
+/* 新品推荐图片大小 */
 .newArra img {
   position: relative;
   width: 260px;
@@ -400,8 +465,10 @@ img[src="img/mungCake.png"] {
   -webkit-transition: all 0.4s;
   transition: all 0.5s;
 }
+
+/* 新品推荐的四个箭头 */
 .newArra img[src="img/arrow.png"] {
-  width:auto;
+  width: auto;
   height: auto;
 }
 .newArra img:hover {
@@ -409,8 +476,10 @@ img[src="img/mungCake.png"] {
   z-index: 2;
 }
 
-.newArra>div{
-  position: absolute; top: 90px; left: 60px;
+.newArra > div {
+  position: absolute;
+  top: 90px;
+  left: 60px;
 }
 .newArraTitle {
   color: #fff;
@@ -426,12 +495,11 @@ img[src="img/mungCake.png"] {
   display: -moz-flex;
 }
 
-.proIntro div{
+.proIntro div {
   font-size: 30px;
   width: 339px;
   height: 400px;
   text-align: center;
-
 }
 
 .proIntro p {
