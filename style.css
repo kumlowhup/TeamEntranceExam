@@ -471,30 +471,41 @@ img[src="img/mungCake.png"] {
   width: auto;
   height: auto;
 }
+
+/* 鼠标经过图片的方法效果 */
 .newArra img:hover {
   transform: scale(calc(299 / 260));
+  /* 当前图片能够盖住其他图片 */
   z-index: 2;
 }
 
+/* 箭头和描述文字的定位 */
 .newArra > div {
   position: absolute;
   top: 90px;
   left: 60px;
 }
+
+/* 新品标题 */
 .newArraTitle {
   color: #fff;
   font-size: 24px;
 }
+
+/* 新品描述信息 */
 .newArraInfo {
   color: #fff;
   font-size: 16px;
 }
+
+/* 产品介绍盒子 */
 .proIntro {
   display: flex;
   display: -webkit-flex;
   display: -moz-flex;
 }
 
+/* 产品介绍中的盒子 */
 .proIntro div {
   font-size: 30px;
   width: 339px;
@@ -502,6 +513,7 @@ img[src="img/mungCake.png"] {
   text-align: center;
 }
 
+/* 产品介绍英语标题 */
 .proIntro p {
   font-size: 15px;
 }
